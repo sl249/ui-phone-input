@@ -1,0 +1,43 @@
+{
+  "name": "ui-phone-input",
+  "version": "0.0.1",
+  "private": false,
+  "dependencies": {
+    "@angular/animations": "~10.0.6",
+    "@angular/common": "~10.0.6",
+    "@angular/compiler": "~10.0.6",
+    "@angular/core": "~10.0.6",
+    "@angular/forms": "~10.0.6",
+    "@angular/platform-browser": "~10.0.6",
+    "@angular/platform-browser-dynamic": "~10.0.6",
+    "@angular/router": "~10.0.6",
+    "@ionic/angular": "^5.3.1",
+    "@ionic/angular-toolkit": "^2.3.0",
+    "country-code-emoji": "^1.0.0",
+    "libphonenumber-js": "^1.7.56",
+    "rxjs": "~6.5.5",
+    "tslib": "^2.0.0",
+    "zone.js": "~0.10.3"
+  },
+  "peerDependencies": {
+    "@angular/animations": ">=10.0.0",
+    "@angular/common": ">=10.0.0",
+    "@angular/core": ">=10.0.0",
+    "@angular/forms": ">=10.0.0",
+    "@angular/platform-browser": ">=10.0.0",
+    "@angular/platform-browser-dynamic": ">=10.0.0",
+    "@angular/router": ">=10.0.0",
+    "@ionic/angular": ">=5.0.0",
+    "core-js": ">=3.5.0",
+    "ionicons": ">=5.0.0",
+    "zone.js": "~0.9.1"
+  },
+  "main": "bundles/ui-phone-input.umd.js",
+  "module": "fesm2015/ui-phone-input.js",
+  "es2015": "fesm2015/ui-phone-input.js",
+  "esm2015": "esm2015/ui-phone-input.js",
+  "fesm2015": "fesm2015/ui-phone-input.js",
+  "typings": "ui-phone-input.d.ts",
+  "metadata": "ui-phone-input.metadata.json",
+  "sideEffects": false
+}

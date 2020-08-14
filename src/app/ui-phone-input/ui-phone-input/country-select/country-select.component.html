@@ -1,0 +1,20 @@
+<ion-list>
+  <ion-item
+    *ngFor="let country of filteredCountries ? filteredCountries : countries"
+    (click)="ionChange.emit(country); popover.dismiss()"
+    [button]="true"
+    lines="none"
+    [id]="country.code"
+  >
+    <ion-row class="ion-justify-content-between ion-align-items-center">
+      <ion-row class="ion-align-items-center">
+        <span class="flag ion-margin-end">{{ country.emoji }}</span>
+        {{ country.name }}
+      </ion-row>
+      <span class="code">+{{ country.numberCode }}</span>
+    </ion-row>
+  </ion-item>
+  <ion-row class="no-results" *ngIf="filteredCountries?.length === 0">
+    {{ noResultsText }}
+  </ion-row>
+</ion-list>

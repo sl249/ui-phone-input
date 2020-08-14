@@ -1,15 +1,23 @@
 {
   "name": "ui-phone-input",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "ionic serve",
+    "build": "ng-packagr -p package.json",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "private": true,
+  "private": false,
+  "ngPackage": {
+    "lib": {
+      "entryFile": "public_api.ts"
+    },
+    "whitelistedNonPeerDependencies": [
+      "."
+    ]
+  },
   "dependencies": {
     "@angular/animations": "~10.0.6",
     "@angular/common": "~10.0.6",
@@ -19,18 +27,27 @@
     "@angular/platform-browser": "~10.0.6",
     "@angular/platform-browser-dynamic": "~10.0.6",
     "@angular/router": "~10.0.6",
+    "@ionic/angular": "^5.3.1",
+    "@ionic/angular-toolkit": "^2.3.0",
+    "country-code-emoji": "^1.0.0",
+    "libphonenumber-js": "^1.7.56",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1000.5",
+    "@angular-eslint/eslint-plugin": "^0.0.1-alpha.32",
     "@angular/cli": "~10.0.5",
     "@angular/compiler-cli": "~10.0.6",
-    "@types/node": "^12.11.1",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
-    "codelyzer": "^6.0.0",
+    "@types/node": "^12.11.1",
+    "@typescript-eslint/eslint-plugin": "^3.7.0",
+    "@typescript-eslint/parser": "^3.7.0",
+    "eslint": "^7.5.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~5.0.0",
     "karma": "~5.0.0",
@@ -38,9 +55,24 @@
     "karma-coverage-istanbul-reporter": "~3.0.2",
     "karma-jasmine": "~3.3.0",
     "karma-jasmine-html-reporter": "^1.5.0",
+    "ng-packagr": "^10.0.4",
+    "prettier": "^2.0.5",
+    "prettier-eslint": "^11.0.0",
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
-    "tslint": "~6.1.0",
     "typescript": "~3.9.5"
+  },
+  "peerDependencies": {
+    "@angular/animations": ">=10.0.0",
+    "@angular/common": ">=10.0.0",
+    "@angular/core": ">=10.0.0",
+    "@angular/forms": ">=10.0.0",
+    "@angular/platform-browser": ">=10.0.0",
+    "@angular/platform-browser-dynamic": ">=10.0.0",
+    "@angular/router": ">=10.0.0",
+    "@ionic/angular": ">=5.0.0",
+    "core-js": ">=3.5.0",
+    "ionicons": ">=5.0.0",
+    "zone.js": "~0.9.1"
   }
 }

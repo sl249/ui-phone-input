@@ -1,0 +1,30 @@
+<ion-item>
+  <ion-button fill="clear" (click)="openCountrySelect($event)">
+    {{ countryInfo?.emoji }}
+    <ion-icon name="caret-down-sharp" slot="end" color="dark"> </ion-icon>
+    <ion-text color="dark" class="ion-margin-start">
+      +{{ countryInfo?.numberCode }}
+    </ion-text>
+  </ion-button>
+  <!-- <ion-select
+      [value]="countryInfo?.code"
+      (ionChange)="changeCountry($event)"
+      interface="popover"
+    >
+      <ion-searchbar></ion-searchbar>
+      <ion-select-option
+        [value]="_countryInfo.code"
+        *ngFor="let _countryInfo of iterableCountryInfos"
+      >
+        {{ _countryInfo.emoji }}
+        {{ _countryInfo.name }}
+        +{{ _countryInfo.numberCode }}
+      </ion-select-option>
+    </ion-select> -->
+  <ion-input
+    [value]="_value.value"
+    (ionChange)="change($event)"
+    [placeholder]="placeholder"
+  >
+  </ion-input>
+</ion-item>

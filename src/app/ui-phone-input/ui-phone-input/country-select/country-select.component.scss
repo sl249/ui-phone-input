@@ -1,0 +1,31 @@
+:host {
+  display: contents;
+  position: relative;
+  ion-item {
+    font-size: 14px;
+    .flag {
+      font-size: 24px;
+    }
+
+    > ion-row {
+      flex: 1;
+      flex-wrap: nowrap;
+      > ion-row {
+        flex-wrap: nowrap;
+      }
+    }
+
+    .code {
+      opacity: 0.64;
+      font-weight: 500;
+    }
+  }
+
+  .no-results {
+    min-height: 100px;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.32;
+    cursor: not-allowed;
+  }
+}
