@@ -1,27 +1,51 @@
-# UiPhoneInput
+# ui-phone-input
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.
+A simple Ionic based phone input component
 
-## Development server
+## Install
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+    npm install ui-phone-input --save
 
-## Code scaffolding
+or
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+    yarn add ui-phone-input
 
-## Build
+## Usage
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+#### Import the `UiPhoneInputModule` in your Module
 
-## Running unit tests
+```typescript
+import { UiPhoneInputModule } from 'ui-phone-input';
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+@NgModule({
+  imports: [UiPhoneInputModule],
+})
+export class Module {}
+```
 
-## Running end-to-end tests
+#### Use ui-phone-input component in your template
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```html
+<ui-phone-input
+  [value]="phoneNumber"
+  (ionChangePhoneNumber)="phoneNumber = $event"
+  (ionChangeValidity)="isValid = $event"
+  placeholder="(631) 888-8888"
+>
+</ui-phone-input>
+```
 
-## Further help
+# API
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Inputs
+
+| @Input      | Purpose              | Type                                            |
+| ----------- | -------------------- | ----------------------------------------------- |
+| value       | The telephone number | string                                          |
+| placeholder | Input placeholder    | string                                          |
+| country     | Country ISO code     | string (2 character ISO code, defaults to 'US') |
+
+| @Output              | Purpose                                                          |
+| -------------------- | ---------------------------------------------------------------- |
+| ionChangePhoneNumber | Triggered when the phone number changes value and can be parsed. |
+| ionChangeValidity    | Triggered when the phone number validity changes                 |
