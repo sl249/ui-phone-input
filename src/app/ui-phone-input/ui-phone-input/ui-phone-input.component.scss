@@ -5,7 +5,6 @@
     --padding-start: 0;
     > ion-button {
       --border-radius: 0;
-      margin-right: 8px;
       height: 100%;
       margin: 0;
       font-size: 24px;
@@ -13,6 +12,10 @@
       ion-text {
         font-size: 14px;
       }
+    }
+
+    ion-input {
+      --padding-start: 8px;
     }
   }
 }
