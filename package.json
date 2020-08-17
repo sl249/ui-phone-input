@@ -9,6 +9,9 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
+  "homepage": "https://github.com/sl249/ui-phone-input",
+  "license": "MIT",
+  "author": "Ricardo Beas <ricardoandrebeas@gmail.com>",
   "private": false,
   "ngPackage": {
     "lib": {
