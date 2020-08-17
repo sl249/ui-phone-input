@@ -1,6 +1,7 @@
 {
   "name": "ui-phone-input",
   "version": "0.0.1",
+  "description": "A simple Ionic based phone input component",
   "scripts": {
     "ng": "ng",
     "start": "ionic serve",
