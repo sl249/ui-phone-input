@@ -32,6 +32,7 @@ export class Module {}
   [value]="phoneNumber"
   (ionChangePhoneNumber)="phoneNumber = $event"
   (ionChangeValidity)="isValid = $event"
+  (ionChangeCountry)="country = $event"
   placeholder="(631) 888-8888"
 >
 </ui-phone-input>
@@ -46,7 +47,7 @@ export class Module {}
 | value         | The telephone number                          | string                                          |
 | placeholder   | Input placeholder                             | string                                          |
 | country       | Country ISO code                              | string (2 character ISO code, defaults to 'US') |
-| noResultsText | Text to be displayed when searching countries | string                                          |
+| noResultsText | Text to be displayed when searching countries | string (Defaults to 'No Results')               |
 
 ## Outputs
 
