@@ -6,21 +6,6 @@
       +{{ countryInfo?.numberCode }}
     </ion-text>
   </ion-button>
-  <!-- <ion-select
-      [value]="countryInfo?.code"
-      (ionChange)="changeCountry($event)"
-      interface="popover"
-    >
-      <ion-searchbar></ion-searchbar>
-      <ion-select-option
-        [value]="_countryInfo.code"
-        *ngFor="let _countryInfo of iterableCountryInfos"
-      >
-        {{ _countryInfo.emoji }}
-        {{ _countryInfo.name }}
-        +{{ _countryInfo.numberCode }}
-      </ion-select-option>
-    </ion-select> -->
   <ion-input
     [value]="_value.value"
     (ionChange)="change($event)"
