@@ -1,5 +1,7 @@
 # ui-phone-input
 
+[![npm version](https://badge.fury.io/js/ui-phone-input.svg)](https://badge.fury.io/js/ui-phone-input)
+
 A simple Ionic based phone input component
 
 ## Install
