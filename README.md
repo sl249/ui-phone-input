@@ -47,6 +47,8 @@ export class Module {}
 | placeholder | Input placeholder    | string                                          |
 | country     | Country ISO code     | string (2 character ISO code, defaults to 'US') |
 
+## Outputs
+
 | @Output              | Purpose                                                          |
 | -------------------- | ---------------------------------------------------------------- |
 | ionChangePhoneNumber | Triggered when the phone number changes value and can be parsed. |
