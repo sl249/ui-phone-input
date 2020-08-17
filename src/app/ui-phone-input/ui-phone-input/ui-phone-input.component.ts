@@ -45,6 +45,7 @@ export class UiPhoneInputComponent implements OnInit, OnChanges, OnDestroy {
     UiPhoneInputComponent['_valueToEmit']['value']
   >();
   @Output() ionChangeValidity = new EventEmitter<boolean>();
+  @Output() ionChangeCountry = new EventEmitter<PhoneNumber['country']>();
 
   public _value = new BehaviorSubject<PhoneNumber['number'] | undefined>(
     undefined
@@ -63,6 +64,7 @@ export class UiPhoneInputComponent implements OnInit, OnChanges, OnDestroy {
   public iterableCountryInfos: CountryInfo[] = [];
 
   private countrySubscription: Subscription;
+  private countryEmitCounter = 0;
 
   constructor(private popover: PopoverController) {}
 
@@ -85,12 +87,18 @@ export class UiPhoneInputComponent implements OnInit, OnChanges, OnDestroy {
       .subscribe((_code) => {
         const code = _code ?? this.defaultCountry;
 
+        if (this.countryEmitCounter !== 0) {
+          this.ionChangeCountry.emit(code);
+        }
+
         this.countryInfo = {
           emoji: this.emojiRefByIsoCode[code],
           name: this.countryNamesByIsoCode[code],
           code,
           numberCode: getCountryCallingCode(code),
         };
+
+        this.countryEmitCounter++;
       });
   }
 

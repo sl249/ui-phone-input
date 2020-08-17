@@ -2,11 +2,14 @@
   [value]="value"
   (ionChangePhoneNumber)="parsedNumber = $event"
   (ionChangeValidity)="isValid = $event"
+  (ionChangeCountry)="country = $event"
   class="ion-margin"
   placeholder="(631) 888-8888"
 >
 </ui-phone-input>
 
 Parsed Number: {{ parsedNumber }}
+<br />
+Country: {{ country }}
 <br />
 Is Valid: {{ isValid }}

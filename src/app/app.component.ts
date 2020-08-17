@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   value: string;
+  country: string;
   parsedNumber = '+17163937536';
   isValid: boolean;
 }

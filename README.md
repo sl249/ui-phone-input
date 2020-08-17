@@ -2,7 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/ui-phone-input.svg)](https://badge.fury.io/js/ui-phone-input)
 
-A simple Ionic based phone input component
+A simple @angular/ionic based phone input component
 
 ## Install
 
@@ -41,15 +41,30 @@ export class Module {}
 
 ## Inputs
 
-| @Input      | Purpose              | Type                                            |
-| ----------- | -------------------- | ----------------------------------------------- |
-| value       | The telephone number | string                                          |
-| placeholder | Input placeholder    | string                                          |
-| country     | Country ISO code     | string (2 character ISO code, defaults to 'US') |
+| @Input        | Purpose                                       | Type                                            |
+| ------------- | --------------------------------------------- | ----------------------------------------------- |
+| value         | The telephone number                          | string                                          |
+| placeholder   | Input placeholder                             | string                                          |
+| country       | Country ISO code                              | string (2 character ISO code, defaults to 'US') |
+| noResultsText | Text to be displayed when searching countries | string                                          |
 
 ## Outputs
 
 | @Output              | Purpose                                                          |
 | -------------------- | ---------------------------------------------------------------- |
 | ionChangePhoneNumber | Triggered when the phone number changes value and can be parsed. |
-| ionChangeValidity    | Triggered when the phone number validity changes                 |
+| ionChangeCountry     | Triggered when the country changes value.                        |
+| ionChangeValidity    | Triggered when the phone number validity changes.                |
+
+# Features
+
+- Emoji Based Flag Support
+- Emits parsed phone number with country code
+- Emits ISO country code
+- Automatic search when country dialog is open. Just type to search.
+
+# Nice to Haves / TODOS
+
+- Test coverage
+- A11y audit (keyboard controls, etc..)
+- Additional internationalization coverage
